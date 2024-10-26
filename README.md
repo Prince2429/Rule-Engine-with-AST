@@ -85,3 +85,9 @@ age > 30 AND department = 'Sales' OR (age < 25 AND department = 'Marketing') AND
 - POST /api/rules/combine - Combine multiple rules
 - POST /api/rules/evaluate - Evaluate a rule against data
 - PUT /api/rules/:id - Modify an existing rule
+
+## Application Images
+![image](https://github.com/user-attachments/assets/b47515b3-61f2-4cba-96c3-9e76323b93ef)
+![image](https://github.com/user-attachments/assets/77360dc2-13a1-43c7-b797-4f61649e0086)
+
+
