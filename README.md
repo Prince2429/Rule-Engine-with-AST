@@ -23,7 +23,42 @@ A modern rule engine application that uses Abstract Syntax Trees (AST) to repres
 ### Backend
 - Flask
 - MySQL
+### Backend Setup
 
+1. Navigate to the `backend` directory.
+2. Create a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Set up the MySQL database:
+   - Create a database named `rule_engine`
+   - Create the following tables:
+     ```sql
+     create database rule_engine;
+     USE rule_engine;
+
+CREATE TABLE IF NOT EXISTS rules (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    rule_string TEXT NOT NULL,
+    ast TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+select * from rules;
+
+DELETE FROM rules WHERE rule_string = 'Combined Rule';
+     ```
+
+5. Start the Flask server:
+   ```
+   python app.py
+   ```
 
 ## Getting Started
 
