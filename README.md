@@ -42,17 +42,18 @@ A modern rule engine application that uses Abstract Syntax Trees (AST) to repres
      create database rule_engine;
      USE rule_engine;
 
-CREATE TABLE IF NOT EXISTS rules (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    rule_string TEXT NOT NULL,
-    ast TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+     CREATE TABLE IF NOT EXISTS rules (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     rule_string TEXT NOT NULL,
+     ast TEXT NOT NULL,
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+     );
 
-select * from rules;
+     select * from rules;
 
-DELETE FROM rules WHERE rule_string = 'Combined Rule';
+     DELETE FROM rules WHERE rule_string = 'Combined Rule';
+     for more refer mysqldatabase.db file in backend folder 
      ```
 
 5. Start the Flask server:
