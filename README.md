@@ -23,7 +23,7 @@ A modern rule engine application that uses Abstract Syntax Trees (AST) to repres
 ### Backend
 - Flask
 - MySQL
-- SQLAlchemy
+
 
 ## Getting Started
 
